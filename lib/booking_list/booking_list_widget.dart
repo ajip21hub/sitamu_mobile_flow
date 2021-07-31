@@ -219,8 +219,8 @@ class _BookingListWidgetState extends State<BookingListWidget> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Image.network(
-                                            'https://i.pinimg.com/originals/a2/70/d2/a270d270d5ca184422cf980475b99e24.gif',
+                                          Image.asset(
+                                            'assets/images/tamu_online.gif',
                                             width: 140,
                                             height: 100,
                                             fit: BoxFit.cover,

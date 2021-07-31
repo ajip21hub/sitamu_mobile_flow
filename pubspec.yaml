@@ -25,11 +25,13 @@ dependencies:
     sdk: flutter
   auto_size_text:
   cached_network_image: ^3.1.0
+  equatable: ^1.2.6
   flutter_spinkit: ^4.1.2+1
   font_awesome_flutter:
   geolocator:
   google_fonts: ^2.1.0
   intl:
+  json_path: ^0.2.1
   page_transition:
   timeago:
   url_launcher:

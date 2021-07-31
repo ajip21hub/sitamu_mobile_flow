@@ -1,3 +1,4 @@
+import '../backend/api_requests/api_calls.dart';
 import '../flutter_flow/flutter_flow_drop_down_template.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -19,13 +20,14 @@ class _TamuOnlineFormWidgetState extends State<TamuOnlineFormWidget> {
   TextEditingController textController1;
   String dropDownValue2;
   TextEditingController textController2;
+  dynamic data_nip;
   final formKey = GlobalKey<FormState>();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    textController1 = TextEditingController();
+    textController1 = TextEditingController(text: 'nip');
     textController2 = TextEditingController();
   }
 
@@ -311,6 +313,19 @@ class _TamuOnlineFormWidgetState extends State<TamuOnlineFormWidget> {
 
                                                 return null;
                                               },
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.fromLTRB(
+                                                  0, 20, 0, 0),
+                                              child: Text(
+                                                'Hello World',
+                                                textAlign: TextAlign.justify,
+                                                style: FlutterFlowTheme
+                                                    .bodyText1
+                                                    .override(
+                                                  fontFamily: 'Poppins',
+                                                ),
+                                              ),
                                             )
                                           ],
                                         ),
@@ -434,8 +449,16 @@ class _TamuOnlineFormWidgetState extends State<TamuOnlineFormWidget> {
                                         padding:
                                             EdgeInsets.fromLTRB(0, 30, 0, 0),
                                         child: FFButtonWidget(
-                                          onPressed: () {
-                                            print('Button pressed ...');
+                                          onPressed: () async {
+                                            if (!formKey.currentState
+                                                .validate()) {
+                                              return;
+                                            }
+                                            data_nip = await ceknipCall(
+                                              nip: textController1.text,
+                                            );
+
+                                            setState(() {});
                                           },
                                           text: 'Kirim',
                                           icon: Icon(
