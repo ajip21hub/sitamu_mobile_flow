@@ -14,3 +14,13 @@ Future<dynamic> ceknipCall({
       },
       returnResponse: true,
     );
+
+Future<dynamic> layanansCall() => ApiManager.instance.makeApiCall(
+      callName: 'layanans',
+      apiDomain: '139.180.145.154',
+      apiEndpoint: 'api/v1/layanans',
+      callType: ApiCallType.GET,
+      headers: {},
+      params: {},
+      returnResponse: true,
+    );
