@@ -37,12 +37,7 @@ class _LoginWidgetState extends State<LoginWidget> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height * 1,
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [FlutterFlowTheme.secondaryColor, Color(0xFFDA7245)],
-              stops: [0, 1],
-              begin: Alignment(0, -1),
-              end: Alignment(0, 1),
-            ),
+            color: Color(0xFF800000),
           ),
           child: Align(
             alignment: Alignment(0, 1),
