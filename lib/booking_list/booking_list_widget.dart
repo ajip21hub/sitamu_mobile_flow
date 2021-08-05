@@ -96,7 +96,7 @@ class _BookingListWidgetState extends State<BookingListWidget> {
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height * 1,
                     decoration: BoxDecoration(
-                      color: Color(0xFFDA7245),
+                      color: Color(0xFF800000),
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(0),
                         bottomRight: Radius.circular(0),
@@ -115,7 +115,7 @@ class _BookingListWidgetState extends State<BookingListWidget> {
                             textAlign: TextAlign.center,
                             style: FlutterFlowTheme.subtitle2.override(
                               fontFamily: 'Open Sans',
-                              color: Colors.black,
+                              color: Color(0xFFF5F5F5),
                             ),
                           ),
                         ),
