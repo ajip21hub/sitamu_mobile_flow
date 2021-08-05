@@ -81,7 +81,7 @@ class _PengaduanWidgetState extends State<PengaduanWidget> {
                       width: MediaQuery.of(context).size.width,
                       height: 250,
                       decoration: BoxDecoration(
-                        color: Color(0xFF05009A),
+                        color: Color(0xFFFFCC27),
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,

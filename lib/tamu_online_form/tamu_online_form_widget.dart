@@ -109,7 +109,7 @@ class _TamuOnlineFormWidgetState extends State<TamuOnlineFormWidget> {
                             width: MediaQuery.of(context).size.width,
                             height: 250,
                             decoration: BoxDecoration(
-                              color: Color(0xFF05009A),
+                              color: Color(0xFFFFCC27),
                             ),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -349,20 +349,6 @@ class _TamuOnlineFormWidgetState extends State<TamuOnlineFormWidget> {
 
                                                     return null;
                                                   },
-                                                ),
-                                                Padding(
-                                                  padding: EdgeInsets.fromLTRB(
-                                                      0, 20, 0, 0),
-                                                  child: Text(
-                                                    'Hello World',
-                                                    textAlign:
-                                                        TextAlign.justify,
-                                                    style: FlutterFlowTheme
-                                                        .bodyText1
-                                                        .override(
-                                                      fontFamily: 'Poppins',
-                                                    ),
-                                                  ),
                                                 )
                                               ],
                                             ),
@@ -387,12 +373,11 @@ class _TamuOnlineFormWidgetState extends State<TamuOnlineFormWidget> {
                                                   ),
                                                 ),
                                                 FlutterFlowDropDown(
-                                                  options: getJsonField(
-                                                          tamuOnlineFormLayanansResponse,
-                                                          r'$.data[*].nama')
-                                                      .map((s) => s.toString())
-                                                      .toList()
-                                                      .toList(),
+                                                  options: [
+                                                    '-- List Bidang --',
+                                                    'Bidang 1',
+                                                    'Bidang2'
+                                                  ],
                                                   onChanged: (value) {
                                                     setState(() =>
                                                         dropDownValue2 = value);

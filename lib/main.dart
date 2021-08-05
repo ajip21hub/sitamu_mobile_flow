@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sitamu/dashboard/dashboard_widget.dart';
+import 'package:sitamu/dashboardv2/dashboardv2_widget.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
-import 'dashboard/dashboard_widget.dart';
+import 'dashboardv2/dashboardv2_widget.dart';
 import 'info_antrian/info_antrian_widget.dart';
 import 'register/register_widget.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
@@ -34,7 +35,7 @@ class NavBarPage extends StatefulWidget {
 
 /// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
-  String _currentPage = 'dashboard';
+  String _currentPage = 'dashboardv2';
 
   @override
   void initState() {
@@ -45,7 +46,7 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'dashboard': DashboardWidget(),
+      'dashboardv2': Dashboardv2Widget(),
       'InfoAntrian': InfoAntrianWidget(),
       'REGISTER': RegisterWidget(),
     };
@@ -75,12 +76,12 @@ class _NavBarPageState extends State<NavBarPage> {
             label: 'Info',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
+            icon: FaIcon(
+              FontAwesomeIcons.signInAlt,
               color: Color(0xFF9E9E9E),
               size: 24,
             ),
-            label: 'Home',
+            label: 'login',
           )
         ],
         backgroundColor: Colors.white,
