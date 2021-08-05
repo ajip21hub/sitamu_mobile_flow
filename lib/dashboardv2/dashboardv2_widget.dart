@@ -142,7 +142,7 @@ class _Dashboardv2WidgetState extends State<Dashboardv2Widget>
                         width: MediaQuery.of(context).size.width,
                         height: MediaQuery.of(context).size.height * 10,
                         decoration: BoxDecoration(
-                          color: Color(0xFFF2F1F5),
+                          color: Color(0xFF800000),
                           borderRadius: BorderRadius.circular(0),
                         ),
                         child: Padding(
