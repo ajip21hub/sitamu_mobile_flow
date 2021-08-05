@@ -20,24 +20,17 @@ class Dashboardv2Widget extends StatefulWidget {
 class _Dashboardv2WidgetState extends State<Dashboardv2Widget>
     with TickerProviderStateMixin {
   final animationsMap = {
-    'containerOnPageLoadAnimation1': AnimationInfo(
+    'containerOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 130,
       fadeIn: true,
     ),
-    'containerOnPageLoadAnimation2': AnimationInfo(
-      curve: Curves.linear,
-      trigger: AnimationTrigger.onPageLoad,
-      duration: 600,
-      delay: 530,
-      fadeIn: true,
-      slideOffset: Offset(0, -40),
-    ),
     'gridViewOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       fadeIn: true,
+      slideOffset: Offset(0, -54),
     ),
   };
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -149,8 +142,7 @@ class _Dashboardv2WidgetState extends State<Dashboardv2Widget>
                           )
                         ],
                       ),
-                    ).animated(
-                        [animationsMap['containerOnPageLoadAnimation1']]),
+                    ).animated([animationsMap['containerOnPageLoadAnimation']]),
                     Padding(
                       padding: EdgeInsets.fromLTRB(0, 170, 0, 0),
                       child: Container(
@@ -507,8 +499,7 @@ class _Dashboardv2WidgetState extends State<Dashboardv2Widget>
                           ).animated(
                               [animationsMap['gridViewOnPageLoadAnimation']]),
                         ),
-                      ).animated(
-                          [animationsMap['containerOnPageLoadAnimation2']]),
+                      ),
                     )
                   ],
                 ),
